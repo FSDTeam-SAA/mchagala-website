@@ -71,10 +71,16 @@ export function ParticlesBackground() {
                 },
               },
               shape: {
-                type: "circle",
+                type: "star",
+                options: {
+                  star: {
+                    inset: 2,
+                    sides: 5,
+                  },
+                },
               },
               size: {
-                value: { min: 1, max: 3 },
+                value: { min: 1.5, max: 4 },
                 animation: {
                   enable: true,
                   speed: 2,
