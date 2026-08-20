@@ -5,17 +5,13 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-
 export const heroSectionData = {
   featuredTag: "AS FEATURED IN",
   featuredBrand: "Forbes.com",
   title: "Get Found in ChatGPT and AI Search",
   description:
     "BackTalk helps ambitious brands become visible, trusted, and recommended across the AI platforms your customers now use to decide.",
-  bulletPoints: [
-    "Built for modern brands",
-    "Clear monthly reporting",
-  ],
+  bulletPoints: ["Built for modern brands", "Clear monthly reporting"],
   primaryCta: {
     label: "Get started in 5 Minutes",
     href: "#get-started",
@@ -62,7 +58,6 @@ interface HeroSectionProps {
   data?: typeof heroSectionData;
 }
 
-
 const PlatformIcon = ({ type }: { type: string }) => {
   const iconPaths: Record<string, string> = {
     chatgpt: "/icons/gpt.png",
@@ -92,8 +87,7 @@ export default function HeroSection({
   data = heroSectionData,
 }: HeroSectionProps) {
   return (
-    <section className="relative w-full min-h-[720px] lg:min-h-[780px] flex flex-col items-center justify-center overflow-hidden bg-[#030712] font-sans px-4 sm:px-6 lg:px-8 py-20">
-      
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#030712] font-sans px-4 sm:px-6 lg:px-8 py-20">
       {/* ==================================================== */}
       {/* PURE CSS BACKGROUND: VERTICAL LIGHT SLATS + BLUE GLOW */}
       {/* ==================================================== */}
@@ -121,7 +115,7 @@ export default function HeroSection({
         {/* Left & Right Edge Dark Vignettes */}
         <div className="absolute inset-y-0 left-0 w-32 sm:w-64 bg-gradient-to-r from-[#030712] via-[#030712]/80 to-transparent" />
         <div className="absolute inset-y-0 right-0 w-32 sm:w-64 bg-gradient-to-l from-[#030712] via-[#030712]/80 to-transparent" />
-        
+
         {/* Bottom Fade Out */}
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#030712] to-transparent" />
       </div>
@@ -129,29 +123,28 @@ export default function HeroSection({
       {/* ==================================================== */}
       {/* FOREGROUND HERO CONTENT */}
       {/* ==================================================== */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center">
-        
+      <div className="relative z-10 w-full max-w-5xl  mx-auto flex flex-col items-center text-center">
         {/* Featured Tag: Forbes.com with thin lines */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-8 sm:w-12 h-[1px] bg-slate-700/60" />
-          <div className="flex flex-col items-center">
-            <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.25em] text-slate-400 mb-0.5">
+        <div className="flex items-center gap-3 mb-6 animate-in fade-in slide-in-from-top-2 duration-700">
+          <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent via-sky-400/80 to-slate-700/60 animate-pulse" />
+          <div className="relative flex flex-col items-center">
+            <div className="absolute inset-x-2 top-3 h-5 bg-sky-400/25 blur-xl animate-pulse" />
+            <span className="relative text-[9px] sm:text-[10px] uppercase font-bold tracking-[0.25em] text-sky-200/80 mb-0.5">
               {data.featuredTag}
             </span>
-            <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white/90 italic">
+            <span className="relative font-serif text-lg sm:text-xl font-bold tracking-tight text-white italic drop-shadow-[0_0_12px_rgba(125,211,252,0.65)] animate-pulse">
               {data.featuredBrand}
             </span>
           </div>
-          <div className="w-8 sm:w-12 h-[1px] bg-slate-700/60" />
+          <div className="w-8 sm:w-12 h-px bg-gradient-to-l from-transparent via-sky-400/80 to-slate-700/60 animate-pulse" />
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.15] max-w-4xl drop-shadow-sm mb-6">
+        <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.15] drop-shadow-sm mb-6 whitespace-nowrap">
           {data.title}
         </h1>
-
         {/* Subtitle / Description */}
-        <p className="text-xs sm:text-sm md:text-base text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto mb-6 text-balance">
+        <p className="text-xs sm:text-sm md:text-base text-slate-300 font-normal leading-relaxed  mx-auto mb-6 text-balance">
           {data.description}
         </p>
 
@@ -168,9 +161,7 @@ export default function HeroSection({
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-14">
           {/* Primary CTA Button */}
-          <Button
-            className="w-full sm:w-auto h-11 px-7 rounded-xl bg-[#2F7BE8] hover:bg-[#2563EB] text-white text-xs sm:text-sm font-semibold shadow-[0_4px_25px_rgba(37,99,235,0.4)] border-none transition-all cursor-pointer"
-          >
+          <Button className="w-full sm:w-auto h-11 px-7 rounded-xl bg-[#2F7BE8] hover:bg-[#2563EB] text-white text-xs sm:text-sm font-semibold shadow-[0_4px_25px_rgba(37,99,235,0.4)] border-none transition-all cursor-pointer">
             <Link href={data.primaryCta.href}>{data.primaryCta.label}</Link>
           </Button>
 
@@ -179,7 +170,9 @@ export default function HeroSection({
             variant="outline"
             className="w-full sm:w-auto h-11 px-7 rounded-xl bg-[#09152B]/80 hover:bg-[#0E2042] text-white border border-[#234A85] text-xs sm:text-sm font-semibold transition-all cursor-pointer"
           >
-            <Link href={data.secondaryCta.href} className="text-white">{data.secondaryCta.label}</Link>
+            <Link href={data.secondaryCta.href} className="text-white">
+              {data.secondaryCta.label}
+            </Link>
           </Button>
         </div>
 
@@ -197,7 +190,6 @@ export default function HeroSection({
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
