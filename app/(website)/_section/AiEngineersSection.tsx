@@ -14,10 +14,10 @@ export const aiEngineersSectionData = {
     title: "Designed by Ai Engineers",
     subtitle: "We come from the top tech companies in the world.",
     logos: [
-      { id: "intercom", name: "Intercom", iconType: "intercom" },
-      { id: "grab", name: "Grab", iconType: "grab" },
-      { id: "sony", name: "Sony", iconType: "sony" },
-      { id: "x", name: "X", iconType: "x" },
+      { id: "icon-1", name: "Icon 1", iconType: "icon1" },
+      { id: "icon-2", name: "Icon 2", iconType: "icon2" },
+      { id: "icon-3", name: "Icon 3", iconType: "icon3" },
+      { id: "icon-4", name: "Icon 4", iconType: "icon4" },
     ],
   },
   featureRows: [
@@ -32,7 +32,7 @@ export const aiEngineersSectionData = {
         href: "#order",
       },
       image:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+        "/icons/image1.jpg",
       imagePosition: "right", // Image on right, text on left
     },
     {
@@ -46,7 +46,7 @@ export const aiEngineersSectionData = {
         href: "#order",
       },
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+       "/icons/image2.jpg",
       imagePosition: "left", // Image on left, text on right
     },
   ],
@@ -60,34 +60,18 @@ interface AiEngineersProps {
 // 2. BRAND LOGO ICONS
 // ==========================================
 const TechLogo = ({ type }: { type: string }) => {
-  switch (type) {
-    case "intercom":
-      return (
-        <svg className="w-8 h-8 fill-white" viewBox="0 0 28 28">
-          <path d="M4 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8zm4-1a1 1 0 0 0-1 1v8a1 1 0 0 0 2 0V8a1 1 0 0 0-1-1zm4-2a1 1 0 0 0-1 1v12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1zm4 1a1 1 0 0 0-1 1v10a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1zm4 2a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1z" />
-        </svg>
-      );
-    case "grab":
-      return (
-        <span className="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans">
-          Grab
-        </span>
-      );
-    case "sony":
-      return (
-        <span className="text-lg sm:text-xl font-black tracking-wider text-white font-serif uppercase">
-          SONY
-        </span>
-      );
-    case "x":
-      return (
-        <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-      );
-    default:
-      return null;
-  }
+  const iconPaths: Record<string, string> = {
+    icon1: "/icons/icon1.png",
+    icon2: "/icons/icon2.png",
+    icon3: "/icons/icon3.png",
+    icon4: "/icons/icon4.png",
+  };
+  const src = iconPaths[type];
+  const iconSize = type === "icon2" || type === "icon3" ? "w-14 h-13" : "w-8 h-8";
+
+  return src ? (
+    <img src={src} alt="" aria-hidden="true" className={`${iconSize} object-contain`} />
+  ) : null;
 };
 
 // ==========================================
@@ -119,12 +103,12 @@ export default function AiEngineersSection({
             </p>
           </div>
 
-          {/* 4 Brand Logo Boxes */}
+          {/* Brand Logo Boxes */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full max-w-2xl">
             {data.header.logos.map((logo) => (
               <div
                 key={logo.id}
-                className="h-20 sm:h-22 rounded-2xl bg-white/[0.03] border border-slate-700/60 hover:border-slate-500/80 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                className="h-20 sm:h-22 rounded-2xl bg-transparent border border-slate-700/60 hover:border-slate-500/80 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
               >
                 <TechLogo type={logo.iconType} />
               </div>

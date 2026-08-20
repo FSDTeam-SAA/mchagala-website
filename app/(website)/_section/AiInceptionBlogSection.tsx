@@ -33,7 +33,7 @@ export const blogSectionData = {
       description:
         "Search engines are no longer just looking for matching keywords. In 2026, they are smarter than ever...",
       imageUrl:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
+   "/icons/image3.jpg",
       ctaText: "Learn More",
       href: "/blog/post-1",
     },
@@ -43,7 +43,7 @@ export const blogSectionData = {
       description:
         "Search engines are no longer just looking for matching keywords. In 2026, they are smarter than ever...",
       imageUrl:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop",
+       "/icons/image4.jpg",
       ctaText: "Learn More",
       href: "/blog/post-2",
     },
@@ -53,7 +53,7 @@ export const blogSectionData = {
       description:
         "Search engines are no longer just looking for matching keywords. In 2026, they are smarter than ever...",
       imageUrl:
-        "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?q=80&w=600&auto=format&fit=crop",
+        "/icons/image5.jpg",
       ctaText: "Learn More",
       href: "/blog/post-3",
     },
