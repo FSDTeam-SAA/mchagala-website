@@ -169,7 +169,7 @@ export default function HowItWorksFlowSection({
   data = howItWorksFlowData,
 }: HowItWorksFlowProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#070F20] py-24 sm:py-32 px-4 sm:px-6 lg:px-10 font-sans text-white">
+    <section id="use-cases" className="relative w-full scroll-mt-24 overflow-hidden bg-[#070F20] py-24 sm:py-32 px-4 sm:px-6 lg:px-10 font-sans text-white">
       
       {/* Background Radial Glow & Starfield Animation */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">

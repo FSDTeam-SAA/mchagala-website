@@ -24,7 +24,7 @@ export default function FaqBannerSection({
   data = faqBannerData,
 }: FaqBannerProps) {
   return (
-    <section className="relative w-full h-[360px] sm:h-[420px] md:h-[500px] overflow-hidden bg-gradient-to-r from-[#173864] via-[#101B33] to-[#0D1527] flex items-center justify-center select-none">
+    <section id="faq" className="relative w-full h-[360px] sm:h-[420px] md:h-[500px] scroll-mt-24 overflow-hidden bg-gradient-to-r from-[#173864] via-[#101B33] to-[#0D1527] flex items-center justify-center select-none">
       
       {/* BACKGROUND WATERMARK "FAQ" TEXT */}
       <div className="absolute inset-0 flex items-center justify-center w-full pointer-events-none">

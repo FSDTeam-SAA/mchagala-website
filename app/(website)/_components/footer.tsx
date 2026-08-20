@@ -98,7 +98,7 @@ const BackTalkIcon = () => (
 // ==========================================
 export default function Footer({ data = footerData }: FooterProps) {
   return (
-    <footer className="w-full bg-slate-800 font-sans text-white border-t border-slate-700/50">
+    <footer id="contact" className="w-full scroll-mt-24 bg-slate-800 font-sans text-white border-t border-slate-700/50">
       <div className="container mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* TOP CTA BANNER ROW */}

@@ -38,7 +38,8 @@ export default function PricingPromoSection({
 }: PricingPromoProps) {
   return (
     <section
-      className="relative w-full min-h-[640px] lg:min-h-[720px] overflow-hidden py-24 sm:py-32 px-6 sm:px-12 lg:px-20 font-sans text-white flex items-center justify-center"
+      id="packages"
+      className="relative w-full min-h-[640px] lg:min-h-[720px] scroll-mt-24 overflow-hidden py-24 sm:py-32 px-6 sm:px-12 lg:px-20 font-sans text-white flex items-center justify-center"
       style={{
         background: `
           radial-gradient(ellipse 65% 55% at 88% 28%, rgba(45, 60, 140, 0.42) 0%, rgba(13, 21, 46, 0) 75%),

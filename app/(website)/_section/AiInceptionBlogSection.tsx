@@ -71,7 +71,7 @@ export default function AiInceptionBlogSection({
   data = blogSectionData,
 }: AiInceptionBlogProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#101720] py-24 sm:py-32 px-4 sm:px-6 lg:px-8 font-sans text-white">
+    <section id="blog" className="relative w-full scroll-mt-24 overflow-hidden bg-[#101720] py-24 sm:py-32 px-4 sm:px-6 lg:px-8 font-sans text-white">
       {/* Background Soft Blue Ambience */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-gradient-to-b from-[#1D4ED8]/10 via-[#0284C7]/5 to-transparent blur-[140px] rounded-full" />
